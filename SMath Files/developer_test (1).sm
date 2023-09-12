@@ -1,0 +1,1576 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio Desktop" version="1.0.8348.30405"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="240">
+    <identity>
+      <id>36b8c929-16ab-4ebb-9c1b-08c7b89d2c86</id>
+      <revision>1024</revision>
+    </identity>
+    <metadata lang="eng">
+      <author>Sayan</author>
+    </metadata>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>0</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio Desktop" version="1.0.8348.30405" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.11.8348.30405" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="SpecialFunctions" version="1.12.8348.30405" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.11.8348.30405" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="AreaRegion" version="1.11.8348.30405" guid="4974b228-4974-44cf-8274-bf2936b4a766" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="0" top="0" width="325" height="29" color="#000000" fontSize="14" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 14px; color: #000000; background-color: #ffffff; font-weight: bold;">CI : COMPONENT IDENTIFICATION</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="36" width="238" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">CI.6 : DESIGN SECTION LOCATION</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="54" width="114" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">dsLoc</e>
+          <e type="operand">150</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="81" width="230" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">CI.8 : LOAD COMBINATION NAME</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="99" width="262" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">loadCombName</e>
+          <e type="operand" style="string">1.25G+1.5Q+EQxx</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="135" width="226" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">CI.9 : LOAD COMBINATION TYPE</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="153" width="302" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">loadCombType</e>
+          <e type="operand" style="string">DEAD+LIVE+EARTHQUAKE</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="360" top="153" width="347" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Options: DEAD+LIVE, DEAD+LIVE+EARTHQUAKE etc.</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="189" width="140" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">CI.10 : LIMIT STATE</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="207" width="150" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">limitState</e>
+          <e type="operand" style="string">ULS</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="360" top="207" width="321" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Options: ULS - STRENGTH, SLS - SERVICIBILITY </p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="234" width="240" height="29" color="#000000" fontSize="14">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 14px; color: #000000; background-color: #ffffff; font-weight: bold;">IP : INPUT PARAMETERS</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="261" width="337" height="26" color="#000000" fontSize="12">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold; font-size: 12px;">B : BUILDING STRUCTURAL PARAMETRS</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="279" width="269" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">B.10 : GEOMETRY OF THE STRUCTURE</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="297" width="325" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">B. 10.8 : OVERALL HEIGHT OF THE STRUCTURE</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="315" width="66" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">H</e>
+          <e type="operand">40</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="378" top="315" width="189" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Overall height of the structure</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="342" width="221" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">B.8.1.1 : HEIGHT OF THE STORY</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="369" width="65" height="30" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">h.s</e>
+          <e type="operand">3</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="405" width="199" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">B.8.1.2 : NUMBER OF STORY</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="432" width="60" height="30" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">N.s</e>
+          <e type="operand">10</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="468" width="277" height="26" color="#000000" fontSize="12">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold; font-size: 12px;">C : SEISMIC DESIGN PARAMETRS</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="486" width="335" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">C.7.1 STRUCTURAL DUCTILITY FACTOR FOR ULS</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="504" width="46" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">μ</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="378" top="513" width="207" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Structural Ductility factor for ULS</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="531" width="326" height="26" color="#000000" fontSize="12" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold; text-decoration: none; background-color: #ffffff; font-size: 12px;">CT : COMPONENT LEVEL PARAMETERS</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="549" width="428" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="428" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold; font-size: 10px;">CT1 : GLOBAL INPUT - MATERIALPROPERTIES</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="567" width="98" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">f'c</e>
+          <e type="operand">40</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="567" width="259" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal;">Design Compressive strength of concrete</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="585" width="98" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">fy</e>
+          <e type="operand">500</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="585" width="190" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="190" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal;">Design Yeild strength of steel</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="603" width="103" height="30" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ε.cmax</e>
+          <e type="operand">0.003</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="603" width="163" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal;">Maximum concrete strain</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="621" width="122" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Es</e>
+          <e type="operand">200000</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="621" width="185" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="185" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal;">Modulus of elasticity of steel</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="657" width="387" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold; font-size: 10px;">CT2 : GLOBAL INPUT - STRENGTH REDUCTION FACTORS</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="675" width="70" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ϕ</e>
+          <e type="operand">0.85</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="675" width="227" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal;">Strength reduction factor for Flexure</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="693" width="76" height="30" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ϕ.o</e>
+          <e type="operand">1.00</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="693" width="383" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Strength reduction factor for Flexure Considering Overstrength</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="729" width="218" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">CT3 : COMPONENT GEOMETRY</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="747" width="58" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">L</e>
+          <e type="operand">8</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="747" width="107" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Length of beam</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="765" width="106" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">sw_s</e>
+          <e type="operand">300</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="765" width="253" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Support Width Start (at beam start point)</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="783" width="106" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">sw_e</e>
+          <e type="operand">450</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="783" width="245" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Support Width End (at beam end point)</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="801" width="161" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Ln</e>
+          <e type="operand">L</e>
+          <e type="operand">sw_s</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">sw_e</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="810" width="133" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Clear Span of beam</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="837" width="471" height="26" color="#000000" fontSize="12" isBreakable="false">
+      <text lang="eng" width="471" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold; text-decoration: none; background-color: #ffffff; font-size: 12px;">DS : DESIGN SECTION LEVEL PARAMETERS</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="855" width="289" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">DS1 : LOCAL INPUT- SECTION GEOMETRY</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="873" width="90" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">bw</e>
+          <e type="operand">300</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="873" width="122" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Width of the beam</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="891" width="82" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">h</e>
+          <e type="operand">500</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="891" width="182" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Overall Depth of the section </p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="927" width="290" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold; font-size: 10px;">DS2 : LOCAL INPUT- REBAR AND COVERS</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="945" width="122" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">covBott</e>
+          <e type="operand">60</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="945" width="402" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="402" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Effective cover (to centre of bottom  longitudinal reinforcement)</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="963" width="114" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">covTop</e>
+          <e type="operand">60</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="963" width="390" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="390" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Effective cover(to centre of top longitudinal reinforcement)</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="981" width="188" height="33" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">As_bott_prov</e>
+          <e type="operand">2734</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="990" width="174" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Bottom main reinforcement</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1008" width="180" height="33" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">As_top_prov</e>
+          <e type="operand">1000</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1017" width="155" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Top main reinforcement</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1071" width="384" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold; font-size: 10px;">DS3 : LOCAL INPUT - EFFECTIVE DEPTH CALCULATIONS</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1098" width="176" height="24" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">dFromTop</e>
+          <e type="operand">h</e>
+          <e type="operand">covBott</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1098" width="306" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eq. ST1.1 Effective depth of the section(from top)</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1116" width="176" height="24" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">dFromBott</e>
+          <e type="operand">h</e>
+          <e type="operand">covTop</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1116" width="328" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal; font-size: 10px;">Eq. ST1.2 Effective depth of the section(from bottom)</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1161" width="287" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold; font-size: 10px;">DS4 : LOCAL INPUT - ANALYSIS RESULTS</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1179" width="107" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">M</e>
+          <e type="operand">100</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1179" width="243" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Moment imported from analysis results</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1197" width="82" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V</e>
+          <e type="operand">150</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1197" width="268" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Shear Force imported from analysis results</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1215" width="74" height="24" color="#000000" bgColor="#80ffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">δ</e>
+          <e type="operand">20</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1215" width="439" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Story drift (ONLY APPLICABLE IF EARTHQUAKE LOAD IS PRESENT)</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1251" width="560" height="26" color="#000000" fontSize="12" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 12px; font-weight: bold;">PR3 : DETERMINATION OF CONCRETE STRESS BLOCK PARAMETERS</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1287" width="128" height="74" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">d</e>
+          <e type="operand">M</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="operand">dFromBott</e>
+          <e type="operand">dFromTop</e>
+          <e type="function" args="3">if</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1287" width="339" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="331" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Effective depth consideration based on design moment</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1359" width="335" height="179" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">alpha1</e>
+          <e type="operand">f'c</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">55</e>
+          <e type="operator" args="2">≤</e>
+          <e type="operand">0.85</e>
+          <e type="operand">0.85</e>
+          <e type="operand">0.004</e>
+          <e type="operand">f'c</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">55</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">0.75</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="operand">0.75</e>
+          <e type="operand">0.85</e>
+          <e type="operand">0.004</e>
+          <e type="operand">f'c</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">55</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="3">if</e>
+          <e type="function" args="3">if</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1359" width="302" height="38" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="292" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal; font-size: 10px;">Eq ST1.6 Width factor for equivalent rectangular concrete compressive stress distribution</p>
+        </content>
+      </text>
+    </region>
+    <region left="567" top="1377" width="184" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="181" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 10px; font-weight: normal; font-style: italic;">[CL. 7.4.2.7, NZS3101-2006]</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1539" width="327" height="162" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">beta1</e>
+          <e type="operand">f'c</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">≤</e>
+          <e type="operand">0.85</e>
+          <e type="operand">0.85</e>
+          <e type="operand">0.008</e>
+          <e type="operand">f'c</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">30</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">0.85</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="operand">0.85</e>
+          <e type="operand">0.008</e>
+          <e type="operand">f'c</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">30</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">0.65</e>
+          <e type="function" args="3">if</e>
+          <e type="function" args="3">if</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1539" width="307" height="38" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="297" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal; font-size: 10px;">Eq ST1.7 Height factor for equivalent rectangular concrete compressive stress distribution</p>
+        </content>
+      </text>
+    </region>
+    <region left="576" top="1557" width="184" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="181" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 10px; font-weight: normal; font-style: italic;">[CL. 7.4.2.7, NZS3101-2006]</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1710" width="324" height="41" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">c_actual_fromTop</e>
+          <e type="operand">fy</e>
+          <e type="operand">As_bott_prov</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">bw</e>
+          <e type="operand">beta1</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">alpha1</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f'c</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1746" width="310" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eq. ST1.8.a Depth of actual neutral axis from  top </p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1773" width="332" height="41" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">c_actual_fromBott</e>
+          <e type="operand">fy</e>
+          <e type="operand">As_top_prov</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">bw</e>
+          <e type="operand">beta1</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">alpha1</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f'c</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1809" width="328" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eq. ST1.8.b Depth of actual neutral axis from bottom </p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1845" width="282" height="24" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">a_fromTop</e>
+          <e type="operand">c_actual_fromTop</e>
+          <e type="operand">beta1</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1863" width="283" height="38" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="283" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eq. ST1.9.a Depth of equivalent actual rectangular concrete stress block from top</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1899" width="298" height="24" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">a_fromBott</e>
+          <e type="operand">c_actual_fromBott</e>
+          <e type="operand">beta1</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="1917" width="266" height="53" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="266" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eq. ST1.9.b Depth of equivalent actual rectangular concrete stress block from bottom</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1953" width="262" height="64" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">cb_fromTop</e>
+          <e type="operand">ε.cmax</e>
+          <e type="operand">ε.cmax</e>
+          <e type="operand">fy</e>
+          <e type="operand">Es</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">dFromTop</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="567" top="1962" width="184" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="181" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 10px; font-weight: normal; font-style: italic;">[CL. 7.4.2.8, NZS3101-2006]</p>
+        </content>
+      </text>
+    </region>
+    <region left="288" top="1980" width="251" height="38" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="248" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal; font-size: 10px;">Eq. ST1.10.a Balanced depth of neutral axis from top, cb</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="2034" width="278" height="64" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">cb_fromBott</e>
+          <e type="operand">ε.cmax</e>
+          <e type="operand">ε.cmax</e>
+          <e type="operand">fy</e>
+          <e type="operand">Es</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">dFromBott</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="2070" width="279" height="38" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="271" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal; font-size: 10px;">Eq. ST1.10.b Balanced depth of neutral axis from bottom, cb</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="2151" width="307" height="24" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">a_max_fromTop</e>
+          <e type="operand">0.75</e>
+          <e type="operand">beta1</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">cb_fromTop</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="567" top="2151" width="184" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="181" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 10px; font-weight: normal; font-style: italic;">[CL. 7.4.2.7, NZS3101-2006]</p>
+        </content>
+      </text>
+    </region>
+    <region left="288" top="2178" width="272" height="38" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="266" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal; font-size: 10px;">Eq. ST1.11.a Maximum allowed depth of equivalent rectangular stress block from top</p>
+        </content>
+      </text>
+    </region>
+    <region left="567" top="2178" width="184" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="181" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 10px; font-weight: normal; font-style: italic;">[CL. 9.3.8.1, NZS3101-2006]</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="2223" width="323" height="24" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">a_max_fromBott</e>
+          <e type="operand">0.75</e>
+          <e type="operand">beta1</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">cb_fromBott</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="2250" width="266" height="53" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="266" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal; font-size: 10px;">Eq. ST1.11.b Maximum allowed depth of equivalent rectangular stress block from bottom</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="2295" width="363" height="41" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">cb_max_fromTop</e>
+          <e type="operand">alpha1</e>
+          <e type="operand">a_max_fromTop</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">fy</e>
+          <e type="operand">Es</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">d</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="2331" width="282" height="38" color="#000000" fontSize="10">
+      <text lang="ita" width="282" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eq. ST1.12.a Maximum allowed balanced depth of neutral axis from top</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="2367" width="379" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">cb_max_fromBott</e>
+          <e type="operand">alpha1</e>
+          <e type="operand">a_max_fromBott</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">fy</e>
+          <e type="operand">Es</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">d</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="2403" width="284" height="38" color="#000000" fontSize="10">
+      <text lang="ita" width="284" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eq. ST1.12.b Maximum allowed balanced depth of neutral axis from bottom</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="2448" width="142" height="29" color="#000000" fontSize="14" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 14px; font-weight: bold; color: #000000; background-color: #ffffff;">DM : DEMAND</p>
+        </content>
+      </text>
+    </region>
+    <region left="36" top="2484" width="195" height="34" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">M_design</e>
+          <e type="operand">M</e>
+          <e type="function" args="1">abs</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">m</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">1</e>
+          <e type="operand">10</e>
+          <e type="operand">5</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">N</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="306" top="2493" width="199" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Design Moment for  the section</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="2529" width="152" height="29" color="#000000" fontSize="14" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 14px; font-weight: bold; color: #000000; background-color: #ffffff;">CP : CAPACITY</p>
+        </content>
+      </text>
+    </region>
+    <region top="2556" color="#000000">
+      <area collapsed="false" />
+      <region left="36" top="2574" width="689" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" width="689" fontFamily="Arial" fontSize="10">
+          <content>
+          <p style="font-weight: bold; font-size: 10px;">PRE-PROCESSING RESULTS (TO IMPORT IN MOMENT CAPACITY CALCULATOR)</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2592" width="96" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">f'c</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">MPa</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">40</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2592" width="249" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" width="248" fontFamily="Arial" fontSize="10">
+          <content>
+          <p style="font-size: 10px;">Design compresive strength of concrete</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2610" width="96" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">fy</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">MPa</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">500</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2610" width="187" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Design Yeild strength of steel</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2646" width="88" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">bw</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">mm</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">300</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2646" width="124" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Width of the Beam</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2664" width="112" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">covTop</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">mm</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">60</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2664" width="356" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Effective cover(to centre of top longitudinal reinforcement)</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2682" width="120" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">covBott</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">mm</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">60</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2682" width="385" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Effective cover (to centre of bottom  longitudinal reinforcement)</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2700" width="136" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">dFromTop</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">mm</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">440</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2700" width="243" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Effective depth of the section(from top)</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2718" width="144" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">dFromBott</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">mm</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">440</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2718" width="265" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Effective depth of the section(from bottom)</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2727" width="186" height="33" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">As_bott_prov</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">mm</e>
+            <e type="operand">2</e>
+            <e type="operator" args="2">^</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">2734</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2736" width="174" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Bottom main reinforcement</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2754" width="178" height="33" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">As_top_prov</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">mm</e>
+            <e type="operand">2</e>
+            <e type="operator" args="2">^</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">1000</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2754" width="155" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Top main reinforcement</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2808" width="108" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">alpha1</e>
+          </input>
+          <result action="numeric">
+            <e type="operand">0.85</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2808" width="368" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Width factor for equivalent rectangular concrete stress block</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2826" width="100" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">beta1</e>
+          </input>
+          <result action="numeric">
+            <e type="operand">0.77</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2826" width="373" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Height factor for equivalent rectangular concrete stress block</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2844" width="184" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">a_fromTop</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">mm</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">134.0196</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2844" width="425" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Depth of equivalent actual rectangular concrete stress block from Top</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2862" width="184" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">a_fromBott</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">mm</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">49.0196</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2862" width="444" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Depth of equivalent actual rectangular concrete stress block from Bottom</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2880" width="192" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">a_max_fromTop</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">mm</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">138.6</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2880" width="451" height="23" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Max depth of equivalent actual rectangular concrete stress block from Top</p>
+        </content>
+        </text>
+      </region>
+      <region left="54" top="2898" width="200" height="24" color="#000000" fontSize="10">
+        <math>
+          <input>
+            <e type="operand">a_max_fromBott</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">mm</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">138.6</e>
+          </result>
+        </math>
+      </region>
+      <region left="306" top="2898" width="428" height="38" color="#000000" fontSize="10" isBreakable="false">
+        <text lang="eng" fontFamily="Arial" fontSize="10">
+          <content>
+          <p>Max depth of equivalent actual rectangular concrete stress block from Bottom</p>
+        </content>
+        </text>
+      </region>
+      <region top="2925" color="#000000">
+        <area terminator="true" />
+      </region>
+    </region>
+    <region left="27" top="2952" width="368" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="368" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 10px; font-weight: bold;">RESULTS FROM MOMENT CAPACITY CALCULATOR</p>
+        </content>
+      </text>
+    </region>
+    <region left="45" top="2961" width="225" height="33" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">M_cap_Sagg</e>
+          <e type="operand">7.0559</e>
+          <e type="operand">10</e>
+          <e type="operand">8</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">N</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="45" top="2988" width="225" height="33" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">M_cap_Hogg</e>
+          <e type="operand">1.3898</e>
+          <e type="operand">10</e>
+          <e type="operand">8</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">N</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="297" top="2988" width="376" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="376" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal; font-size: 10px;">Moment Capacity imported from moment capacity calculator</p>
+        </content>
+      </text>
+    </region>
+    <region left="27" top="3042" width="318" height="83" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">M_cap</e>
+          <e type="operand">M</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="operand">M_cap_Hogg</e>
+          <e type="operand">ϕ</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">M_cap_Sagg</e>
+          <e type="operand">ϕ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="3">if</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">N</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">1.1813</e>
+          <e type="operand">10</e>
+          <e type="operand">8</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="297" top="3087" width="420" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="Agency FB" fontSize="10">
+        <content>
+          <p style="font-family: Arial;">Selection of Moment capacity based on Sagging or hogging Demand</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="3132" width="447" height="29" color="#000000" fontSize="14" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="color: #000000; background-color: #ffffff; font-weight: bold; font-size: 14px;">UF : RESULTS : SAFETY / UTILIZATION FACTOR</p>
+        </content>
+      </text>
+    </region>
+    <region left="27" top="3159" width="340" height="41" color="#000000" bgColor="#00ff40" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">utilityRatioForFlexure</e>
+          <e type="operand">M_design</e>
+          <e type="operand">M_cap</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.8465</e>
+        </result>
+      </math>
+    </region>
+  </regions>
+  <regions type="header">
+    <region left="0" top="0" width="773" height="32" color="#000000" fontSize="16" isBreakable="false">
+      <text lang="eng" width="773" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 16px; font-weight: bold;">ZURU PYTHON DEVELOPER TEST</p>
+        </content>
+      </text>
+    </region>
+  </regions>
+  <regions type="footer">
+    <region left="0" top="9" width="208" height="23" color="#000000" fontSize="8" isBreakable="false">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>
+            <span style="font-size: 8px; font-style: italic;">CONFIDENTIAL - All rights reserved. </span>
+            <span />
+            <span />    </p>
+        </content>
+      </text>
+    </region>
+    <region left="333" top="9" width="68" height="27" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">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</raw>
+      </picture>
+    </region>
+    <region left="603" top="9" width="42" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Page</e>
+        </input>
+      </math>
+    </region>
+    <region left="639" top="9" width="18" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">\[PAGENUM[0]]\</e>
+        </input>
+      </math>
+    </region>
+    <region left="657" top="9" width="26" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">of</e>
+        </input>
+      </math>
+    </region>
+    <region left="684" top="9" width="18" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">\[COUNT[0]]\</e>
+        </input>
+      </math>
+    </region>
+  </regions>
+</worksheet>
