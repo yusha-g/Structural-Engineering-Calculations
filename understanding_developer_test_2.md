@@ -64,6 +64,18 @@ Sure! Let's break down the calculations step by step, using simple words.
 
 - **Bottom Main Reinforcement (As_bott_prov) and Top Main Reinforcement (As_top_prov):** These describe the amount of reinforcement used.
 
+#### Local Input - Effective Depth Calculations
+
+- **Effective Depth Calculations:**
+
+  - **dFromTop := h - covBott**  
+    This formula is calculating the effective depth of the section from the top. It's taking the overall depth of the section (h) and subtracting the distance from the surface to the bottom reinforcement (covBott). 
+
+  - **dFromBott := h - covTop**  
+    This formula is calculating the effective depth of the section from the bottom. It's taking the overall depth of the section (h) and subtracting the distance from the surface to the top reinforcement (covTop).
+
+To put it simply, these calculations are finding out how deep into the section you can go from the top and bottom before you encounter the reinforcement. This information is crucial for understanding how the section will behave under different types of loads.
+
 ### 5. Analysis Results:
 
 - **Moment (M):** This is the bending force applied to the beam, measured in kilonewton-meters (kNm).
