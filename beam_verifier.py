@@ -31,8 +31,9 @@ def calc_a(A, beta1, alpha1):
     c_actual = calc_c_actual(A, beta1, alpha1)
     return round(c_actual * beta1, 4)
 
-#=======================
+#======================= For a_max_fromTop and a_max_fromBott ============
 
+#dFromTop and dFromBott
 def calc_d(cov):
     return GLOBAL_VAR.h - cov
 
@@ -45,25 +46,29 @@ def calc_cb(d):
 def calc_a_max(beta1, d):
     cb = calc_cb(d)
     return round(0.75 * beta1 * cb, 4)
-    
+
+#================================= e-3
+
 def convert_to_exp(num):
     for i in range(1,4):
         num *=10
     return round(num,4)
+
 #============================= MAIN ==================================
 
 def beam_verification():
     
     global a_max_fromTop, a_max_fromBott,a_fromTop, a_fromBott,dFromTop, dFromBott,alpha1
 
-    alpha1 = calc_alpha()   #needed for c_actual_fromTop/fromBott
+    #needed for c_actual_fromTop/fromBott
 
-    beta1 = calc_beta()    #needed for c_actual_fromTop/fromBott
+    alpha1 = calc_alpha()   
+    beta1 = calc_beta()    
 
     #print(alpha1,"alph:a\nbeta:",beta1)
 
-    #============= a_fromTop a_fromBott ===========
 
+    #============= a_fromTop a_fromBott ===========
 
     a_fromTop = calc_a(GLOBAL_VAR.As_bott_prov, beta1, alpha1)
 
@@ -86,14 +91,15 @@ def beam_verification():
 
     #print(a_max_fromTop, ": a_max TOP\n a_max BOTT: ",a_max_fromBott)
 
+
     #=============== MOMENT CAPACITY CALCULATOR ==============
 
     M_design = abs(GLOBAL_VAR.M)
     M_cap = moment_capacity_calculator()
 
-    #SAFETY / UTILIZATION FACTOR
-    print("M_design: ",M_design,"\nM_cap: ",M_cap)
+    #print("M_design: ",M_design,"\nM_cap: ",M_cap)
 
+    #SAFETY / UTILIZATION FACTOR
     utilityRatioForFlexure = convert_to_exp( M_design / M_cap )
 
     return utilityRatioForFlexure
