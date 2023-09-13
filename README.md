@@ -192,4 +192,6 @@ So, the given test output for utilityRatioForFlexture is valid for the set of in
 
 ## Testing
 - `pytest test_developer.py`
-- Two tests are provided with the above mentioned set of values
+- Two tests are provided with the above mentioned set of values <br/>
+
+[Test-Image](./SMath%20Files/test.png)
