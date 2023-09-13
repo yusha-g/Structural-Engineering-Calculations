@@ -1,4 +1,6 @@
 # Scientific Python Developer Test
+[git repo link](https://github.com/yusha-g/Structural-Engineering-Calculations)
+<hr>
 
 # TOC
 ## [1. Files](#files)
@@ -194,4 +196,3 @@ So, the given test output for utilityRatioForFlexture is valid for the set of in
 - `pytest test_developer.py`
 - Two tests are provided with the above mentioned set of values <br/>
 
-![Test-Image](/SMath%20Files/test.png)
