@@ -11,27 +11,27 @@
 ## [3. Testing](#testing)
 
 ## Files
-The assignment is broken down into 3 files. 
+The assignment utilizes 3 files. 
 
 ### _GLOBAL_VAR.py_
 
 - Some variables are required across modules. 
 - These common variables are stored in GLOBAL_VAR.py
 - All values must be initialised `(GLOBAL_VAR.set_variables())` before proceeding with beam verification.
-- NOTE: value of M is given in kN m, the input must be given in N mm (x 1000)
+- _**`NOTE`: value of M is given in kN m, the input must be given in N m (x 1000)**_
 
 ### _beam_verifier.py_
-
+`INPUT: None` <br/>
+`OUTPUT: utilityRationForFlexture`
 - Since all required values are initialised in GLOBAL_VAR, no parameters need to be passed.
 - It calculates the following values for moment capacity calculator:
     - a_fromTop, a_fromBott
     - a_max_fromTop, a_max_fromBott,
     - dFromTop, dFromBott
     - alpha1
-- After the moment capacity calculations are completed, it calculates and **returns the utilityRationForFlexture.**
 
 ### _moment_capacity.py_
-
+`INPUT:`
 - The following values are imported from beam_verifier:
     - a_fromTop, a_fromBott
     - a_max_fromTop, a_max_fromBott,
@@ -42,6 +42,8 @@ The assignment is broken down into 3 files.
     - As_bott_prov, As_top_prov
     - bw
     - covTop, covBott
+
+`OUTPUT: M_cap`
 - After calculations, it return the **M_cap** value to beam_verifier.py
 
 
@@ -186,6 +188,7 @@ So, the given test output for utilityRatioForFlexture is valid for the set of in
     - Imported Inputs (from developer test)
 - Among this, dFromTop and dFromBott are categorized as local inputs even though they are calculated in developer_test.
 - It would be more fitting if dFromTop and dFromBott were classified as Imported Inputs.
+- The code is written assuming the same. moment_capacity imports the variables from developer_test
 
 ## Testing
 - `pytest test_developer.py`
