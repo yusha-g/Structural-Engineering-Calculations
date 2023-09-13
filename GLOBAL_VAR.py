@@ -19,7 +19,7 @@ As_bott_prov -> Bottom main reinforcement
 As_top_prov -> Top main reinforcement
 
 ======= LOCAL INPUT - ANALYSIS RESULTS =========
-M -> Moment imported from analysis results
+M -> Moment imported from analysis results (N m)
 
 '''
 
