@@ -1,5 +1,15 @@
 # Scientific Python Developer Test
 
+# TOC
+## [1. Files](#files)
+
+## [2.Errors](#dicrepancies-in-smath-files)
+&ensp;&ensp; **[2.1.Test Outputs](#test-outputs)** <br/>
+&ensp;&ensp; **[2.2.Omision of Exponent](#omission-of-exponent-in-utilityratioforflexture)** <br/>
+&ensp;&ensp; **[2.3.Input Categorization in Moment Capacity Calculator](#input-categorization-in-moment-capacity-calculator)** <br/>
+
+## [3. Testing](#testing)
+
 ## Files
 The assignment is broken down into 3 files. 
 
@@ -35,11 +45,7 @@ The assignment is broken down into 3 files.
 - After calculations, it return the **M_cap** value to beam_verifier.py
 
 
-## Dicrepencies in the SMath Files
-
-### Unaccounted Value in Moment Capacity Calculator Results
-- In developer_test(1).sm, under RESULTS FROM MOMENT CAPACITY CALCULATOR, in the formula for M_cap we have an unaccounted value of =1.1813*108Nmm
-
+## Dicrepancies in SMath Files
 ### Test Outputs
 - In developer_test.sm we are given the following values:
     - fy = 500
@@ -170,15 +176,15 @@ utilityRatioForFlexture
 
 So, the given test output for utilityRatioForFlexture is valid for the set of inputs in moment_capacity.sm
 
-### Omission of Exponent in test output value
+### Omission of Exponent in utilityRatioForFlexture
 - As mentioned above, the value of test output value is coming to 0.8465 x 10^-3
 - However, only 0.8465 is mentioned in the document. 
 
-### Mislabelling type of data in Moment Capacity Calculator
+### Input Categorization in Moment Capacity Calculator
 - in moment_capacity.sm variables are categorized into 2:
     - Local inputs
     - Imported Inputs (from developer test)
-- Among this, dFromTop and dFromBott is categorized as local inputs even though they are calculated in developer_test.
+- Among this, dFromTop and dFromBott are categorized as local inputs even though they are calculated in developer_test.
 - It would be more fitting if dFromTop and dFromBott were classified as Imported Inputs.
 
 ## Testing

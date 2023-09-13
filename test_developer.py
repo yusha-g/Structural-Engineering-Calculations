@@ -1,7 +1,7 @@
 from beam_verifier import beam_verification
 import GLOBAL_VAR
 
-'''
+''' pytest test_developer.py
     fy, f_c, Ep_cmax, Es,
     phi,
     bw, h,
@@ -43,4 +43,3 @@ def test_2():
 
     assert result == 0.6652
 
-test_2()
